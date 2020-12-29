@@ -12,6 +12,7 @@ Deactivate virtual env : Script\deactivate.bat
 
 * sudo python3 -m pip install virtualenv
 * export PATH=/var/packages/py3k/target/usr/local/bin:$PATH
+* pip3 install virtualenv
 
 ### Virtualenv
 
