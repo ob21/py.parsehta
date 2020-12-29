@@ -6,7 +6,7 @@ Activate virtual env : Script\activate.bat
 
 Deactivate virtual env : Script\deactivate.bat
 
-Export virtual env packages : python -m pip freeze > requirements.txt
+Export virtual env requitements (python packages) : python -m pip freeze > requirements.txt
 
 ## On Linux
 
@@ -22,4 +22,4 @@ Activate virtual env : source env/bin/activate
 
 Deactivate virtual env : deactivate
 
-Install requirements from txt file : python -m pip install -r requirements.txt
+Install requirements (python packages) from txt file : python -m pip install -r requirements.txt
