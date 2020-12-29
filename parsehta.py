@@ -4,6 +4,6 @@ table1 = etl.fromtext('tension.md')
 
 print(table1)
 
-table2 = table1.capture('lines', '(.*) (.*) (.*) (.*)$', ['date', 'hour', 'mesure1', 'mesure2', 'mesure3'])
-
-print(table2)
+for line in open("tension.md"):
+    if line.strip() :
+        print("line>" + line.strip())
