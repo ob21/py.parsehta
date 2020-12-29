@@ -8,7 +8,7 @@ Deactivate virtual env : Script\deactivate.bat
 
 ## On Linux
 
-### Pre-requisite
+### Pre-requisites
 
 * sudo python3 -m pip install virtualenv
 
