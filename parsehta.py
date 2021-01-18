@@ -1,23 +1,6 @@
-#import petl as etl
 import datetime
 import statistics
-#import pandas
-#import plotly.express as px
-import matplotlib.pyplot as plt
 
-#table1 = etl.fromtext('tension.md')
-#print("\n> print table1")
-#print(table1)
-
-#print("\n> print file lines not empty")
-#for line in open("tension.md"):
-#    if line.strip() :
-#        print("line>" + line.strip())
-
-def cm_to_inch(value):
-    return value/2.54 
-
-print("\n> print filtered array from a file")
 with open("tension.md") as file:
     lines = file.readlines()
 iterator = filter(lambda line: line.strip(), lines)
@@ -29,23 +12,29 @@ diastolic = []
 systolic = []
 
 for item in entries:
-    if len(item)==5:
-    	date_time_obj = datetime.datetime.strptime(item[0]+","+item[1], '%d/%m/%y,%Hh%M')
-    	print("date : "+str(date_time_obj))
-    	dates.append(date_time_obj)
-    	syst = statistics.mean([int(item[2].split('/')[0]),int(item[3].split('/')[0]),int(item[4].split('/')[0])])
-    	print("- syst : "+str(round(syst)))
-    	systolic.append(round(syst))
-    	dias = statistics.mean([int(item[2].split('/')[1]),int(item[3].split('/')[1]),int(item[4].split('/')[1])])
-    	print("- dias : "+str(round(dias)))
-    	diastolic.append(round(dias))
-
-plt.figure(figsize=(cm_to_inch(30), cm_to_inch(10)))
-plt.plot(dates, systolic, color='red', label='syst', marker="o")
-plt.plot(dates, diastolic, color='blue', label='dias', marker='o')
-plt.legend()
-#plt.axis([dates[0], dates[len(dates)-1], 50, 180])
-plt.grid(True)
-plt.savefig('tension.png')
-#plt.show()
-
+    if len(item)>2:
+       	if '/' not in item[0]:
+            print("'/' not in date")
+            break
+        if 'h' not in item[1]:
+            print("'h' not in hour")
+            break
+        if '/' not in item[2]:
+            print("'/' not in item[2]")
+            break
+        date_time_obj = datetime.datetime.strptime(item[0]+","+item[1], '%d/%m/%y,%Hh%M')
+        print("date : "+str(date_time_obj))
+        dates.append(date_time_obj)
+        #TODO => check item[2,3,4] presence and format
+        sys_array = []
+        dia_array = []
+        for i in range(2,(len(item)-1)):
+            sys_array.append(int(item[i].split('/')[0]))
+            dia_array.append(int(item[i].split('/')[1]))
+        print("number of measures : "+str(len(sys_array)))
+        sys_mean = statistics.mean(sys_array)
+        print("- sys : "+str(round(sys_mean)))
+        systolic.append(round(sys_mean))
+        dia_mean = statistics.mean(dia_array)
+        print("- dia : "+str(round(dia_mean)))
+        diastolic.append(round(dia_mean))
