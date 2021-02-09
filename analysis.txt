@@ -1,0 +1,104 @@
+date : 2020-12-25 23:30:00
+- sys : 130
+- dia : 86
+date : 2020-12-26 09:05:00
+- sys : 129
+- dia : 89
+date : 2020-12-26 23:50:00
+- sys : 127
+- dia : 83
+date : 2020-12-27 09:30:00
+- sys : 128
+- dia : 86
+date : 2020-12-27 23:00:00
+- sys : 129
+- dia : 85
+date : 2020-12-28 09:00:00
+- sys : 122
+- dia : 90
+date : 2020-12-28 23:30:00
+- sys : 124
+- dia : 84
+date : 2020-12-29 08:40:00
+'/' not in item[i] (pressure bad format)
+- sys : 123
+- dia : 82
+date : 2020-12-29 23:30:00
+- sys : 134
+- dia : 85
+date : 2020-12-30 09:30:00
+- sys : 127
+- dia : 88
+date : 2020-12-30 23:30:00
+- sys : 130
+- dia : 86
+date : 2020-12-31 09:00:00
+- sys : 118
+- dia : 83
+date : 2021-01-06 08:20:00
+- sys : 130
+- dia : 87
+date : 2021-01-08 07:40:00
+- sys : 129
+- dia : 82
+date : 2021-01-09 08:30:00
+- sys : 122
+- dia : 86
+date : 2021-01-10 09:00:00
+- sys : 126
+- dia : 90
+date : 2021-01-10 23:30:00
+- sys : 123
+- dia : 79
+date : 2021-01-11 07:40:00
+- sys : 126
+- dia : 89
+date : 2021-01-11 23:30:00
+- sys : 121
+- dia : 85
+date : 2021-01-12 07:30:00
+- sys : 123
+- dia : 87
+date : 2021-01-12 23:30:00
+- sys : 151
+- dia : 99
+date : 2021-01-13 08:30:00
+- sys : 123
+- dia : 83
+date : 2021-01-13 23:30:00
+- sys : 138
+- dia : 93
+date : 2021-01-14 07:30:00
+- sys : 117
+- dia : 78
+date : 2021-01-14 22:00:00
+- sys : 132
+- dia : 85
+date : 2021-01-15 07:30:00
+- sys : 121
+- dia : 83
+date : 2021-01-15 23:00:00
+- sys : 117
+- dia : 85
+date : 2021-01-16 08:00:00
+- sys : 119
+- dia : 84
+date : 2021-01-17 09:00:00
+- sys : 122
+- dia : 78
+'/' not in date (day bad format)
+
+Total of measures : 29
+
+Number of days of measures : 18
+
+Measures from 25/12/20 to 17/01/21
+
+Max sys : 151
+Min sys : 117
+
+Max dia : 99
+Min dia : 78
+
+Moy sys : 126
+Moy dia : 86
