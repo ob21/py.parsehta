@@ -26,8 +26,8 @@ date_max = datetime.datetime.strptime("30/12/22 00h00", '%d/%m/%y %Hh%M')
 #date_min = datetime.datetime.strptime("28/12/20 00h00", '%d/%m/%y %Hh%M')
 #date_max = datetime.datetime.strptime("18/01/21 00h00", '%d/%m/%y %Hh%M')
 
-print("|          Date           |    Diastolique    |    Systolique    |    Commentaire   |")
-print("|    -----------------    |    -----------    |    ----------    |    -----------   |")
+print("|          Date           |    Diastolique    |    Systolique    | Tendancy |    Commentaire   |")
+print("|    -----------------    |    -----------    |    ----------    | -------- |    -----------   |")
 for item in entries:
     #print(item)
     if len(item)>2:
@@ -79,10 +79,14 @@ for item in entries:
         dia_mean = statistics.mean(dia_array)
         #print("- dia : "+str(round(dia_mean)))
         diastolic.append(round(dia_mean))
+        if sys_mean>140 or dia_mean>90:
+            tendancy="+"
+        else:
+            tendancy="-"
         print("| "+bold+str(date_time)+bold + " |        " + str(round(sys_mean)) + "        |        "  + 
 str(round(dia_mean)).ljust(3,' ') 
 + 
-"       |    " + 
+"       |    "+tendancy+"     |    " + 
 comment)
 print("")
 print("Total of measures : " + str(len(systolic)))
