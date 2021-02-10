@@ -26,8 +26,8 @@ date_max = datetime.datetime.strptime("30/12/22 00h00", '%d/%m/%y %Hh%M')
 #date_min = datetime.datetime.strptime("28/12/20 00h00", '%d/%m/%y %Hh%M')
 #date_max = datetime.datetime.strptime("18/01/21 00h00", '%d/%m/%y %Hh%M')
 
-print("|          Date           |    Diastolique    |    Systolique    | Tendancy |    Commentaire   |")
-print("|    -----------------    |    -----------    |    ----------    | -------- |    -----------   |")
+print("|          Date           |    Diastolique    |    Systolique    | Tendancy |    Commentaire ")
+print("|    -----------------    |    -----------    |    ----------    | -------- |    ----------- ")
 for item in entries:
     #print(item)
     if len(item)>2:
